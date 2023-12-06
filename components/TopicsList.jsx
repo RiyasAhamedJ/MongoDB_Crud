@@ -1,6 +1,6 @@
 import Link from "next/link";
 import RemoveBtn from "./RemoveBtn";
-import { HiPencilAlt } from "react-icons/hi";
+
 
 const getTopics = async () => {
   try {
@@ -19,7 +19,7 @@ const getTopics = async () => {
 };
 
 export default async function TopicsList() {
-  const { topics } = await getTopics();
+  const  {topics}  = await getTopics();
 
   return (
     <>
@@ -36,7 +36,7 @@ export default async function TopicsList() {
           <div className="flex gap-2">
             <RemoveBtn id={t._id} />
             <Link href={`/editTopic/${t._id}`}>
-              <HiPencilAlt size={24} />
+              Edit
             </Link>
           </div>
         </div>

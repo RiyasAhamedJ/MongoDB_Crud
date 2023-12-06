@@ -1,6 +1,6 @@
 "use client";
 
-import { HiOutlineTrash } from "react-icons/hi";
+
 import { useRouter } from "next/navigation";
 
 export default function RemoveBtn({ id }) {
@@ -21,7 +21,7 @@ export default function RemoveBtn({ id }) {
 
   return (
     <button onClick={removeTopic} className="text-red-400">
-      <HiOutlineTrash size={24} />
+      Delete
     </button>
   );
 }
